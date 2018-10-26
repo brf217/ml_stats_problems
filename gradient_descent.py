@@ -71,8 +71,8 @@ plt.scatter(x_points, y_points)
 plt.plot(x_points, list(map(y, x_points)))
 
 
-
-
+# see notes here 
+# https://medium.com/@aerinykim/why-do-we-subtract-the-slope-a-in-gradient-descent-73c7368644fa
 
 
 
