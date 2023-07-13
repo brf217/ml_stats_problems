@@ -1,17 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 26 09:13:46 2018
-
-@author: feebr01
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-    
-# simple implementation of gradient descent on a single function ###################################
+# =============================================================================
+# gradient descent
+# =============================================================================
 x = np.arange(-3,4,1)
 
 def func(x):
@@ -20,12 +12,10 @@ def func(x):
 
 y = [func(x) for x in x]
 
-
 # derivative of function
 def deriv_func(x):
     y = 2*x
     return y
-
 
 # initialize values for optimization
 x_vals = []
@@ -37,13 +27,12 @@ for i in range(1000):
 plt.plot(x_vals)
 
 
-
-
-# example of linear regression solved with gradient descent ########################################
+# =============================================================================
+# simple lr with gradient descent
+# =============================================================================
 # set up and plot points
 x_points = [1,1,2,3,4,5,6,7,8,9,10,11]
 y_points = [1,2,3,1,4,5,6,4,7,10,15,9]
-
 
 # create y = mx + b formula inputs
 m,b = 0,0
@@ -69,7 +58,6 @@ for i in range(500):
 # check final plot    
 plt.scatter(x_points, y_points)
 plt.plot(x_points, list(map(y, x_points)))
-
 
 # see notes here 
 # https://medium.com/@aerinykim/why-do-we-subtract-the-slope-a-in-gradient-descent-73c7368644fa
