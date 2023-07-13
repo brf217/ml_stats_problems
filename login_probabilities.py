@@ -1,21 +1,8 @@
-
-
-
-#Data Science interview probablility question
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-'''
-logins in one csv column, days logged in in second, non-parsed input
-
-'''
-
 users = []
 logins = []
-
 
 filename = 'logins.csv'
 
@@ -25,15 +12,11 @@ with open(filename) as f:
         users.append(i.split(',')[0])
         logins.append(i.split(',')[1])
 
-
-
 #create dictionary - convert to numbers while filling dictionary
 from collections import defaultdict
 d=defaultdict(list)
 for i,j in zip(users, logins):
     d[int(i)].append(int(j))
-    
-    
     
 #define function    
 def prob(day):
@@ -45,8 +28,6 @@ def prob(day):
             ans.append(0)
     return np.mean(ans)
         
-
-
 #get probabilities for each day
 d_ans={}
 for i in range(0,7):
